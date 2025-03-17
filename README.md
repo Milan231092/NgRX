@@ -11,8 +11,7 @@ Here's a simple `README.md` focusing only on running the application for your cl
 
 1. **Clone the repository**  
    ```sh
-   git clone <repository-url>
-   cd <project-folder>
+   git clone https://github.com/Milan231092/NgRX.git
    ```
 
 2. **Install dependencies**  
@@ -20,26 +19,13 @@ Here's a simple `README.md` focusing only on running the application for your cl
    npm install
    ```
 
-3. **Set up Firebase**  
-   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)  
-   - Add a new web app and get Firebase config  
-   - Replace the Firebase config in `src/environments/environment.ts`
-
-4. **Run the application**  
+3. **Run the application**  
    ```sh
    ng serve
    ```
    - Open `http://localhost:4200/` in your browser
 
-## Deployment (Optional)
-To deploy the app using Firebase Hosting:
-```sh
-ng build
-firebase deploy
-```
-Make sure Firebase CLI is installed: `npm install -g firebase-tools`
-
 ---
 
-Let me know if you need any modifications! 🚀
+Let me know if you have any query, thanks!
 ```
