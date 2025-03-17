@@ -1,6 +1,3 @@
-Here's a simple `README.md` focusing only on running the application for your client demo:  
-
-```markdown
 # Angular 19 Firebase Message Application
 
 ## Prerequisites
@@ -25,7 +22,3 @@ Here's a simple `README.md` focusing only on running the application for your cl
    ```
    - Open `http://localhost:4200/` in your browser
 
----
-
-Let me know if you have any query, thanks!
-```
