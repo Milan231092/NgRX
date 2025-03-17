@@ -1,59 +1,45 @@
-# MessagesApp
+Here's a simple `README.md` focusing only on running the application for your client demo:  
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.3.
+```markdown
+# Angular 19 Firebase Message Application
 
-## Development server
+## Prerequisites
+- Node.js (LTS version recommended)
+- Angular CLI (`npm install -g @angular/cli`)
 
-To start a local development server, run:
+## Setup & Run
 
-```bash
-ng serve
-```
+1. **Clone the repository**  
+   ```sh
+   git clone <repository-url>
+   cd <project-folder>
+   ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+2. **Install dependencies**  
+   ```sh
+   npm install
+   ```
 
-## Code scaffolding
+3. **Set up Firebase**  
+   - Create a Firebase project at [Firebase Console](https://console.firebase.google.com/)  
+   - Add a new web app and get Firebase config  
+   - Replace the Firebase config in `src/environments/environment.ts`
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+4. **Run the application**  
+   ```sh
+   ng serve
+   ```
+   - Open `http://localhost:4200/` in your browser
 
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
+## Deployment (Optional)
+To deploy the app using Firebase Hosting:
+```sh
 ng build
+firebase deploy
 ```
+Make sure Firebase CLI is installed: `npm install -g firebase-tools`
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
+Let me know if you need any modifications! 🚀
 ```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
