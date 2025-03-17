@@ -1,0 +1,59 @@
+<div class="messages-container">
+  <div class="messages-header">
+    <h1>Messages</h1>
+    <button mat-raised-button color="primary" (click)="openMessageDialog()">
+      Add Message
+    </button>
+  </div>
+
+  <ng-container *ngIf="(loading$ | async) === true">
+    <div class="loading-container">
+      <mat-spinner diameter="40"></mat-spinner>
+      <p>Loading messages...</p>
+    </div>
+  </ng-container>
+
+  <div class="messages-table-container" *ngIf="(loading$ | async) === false">
+    <table mat-table [dataSource]="(messages$ | async) || []" class="mat-elevation-z4">
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef>ID</th>
+        <td mat-cell *matCellDef="let message">{{ message.id }}</td>
+      </ng-container>
+
+      <!-- Email Column -->
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef>Email</th>
+        <td mat-cell *matCellDef="let message">{{ message.email }}</td>
+      </ng-container>
+
+      <!-- Message Column -->
+      <ng-container matColumnDef="message">
+        <th mat-header-cell *matHeaderCellDef>Message</th>
+        <td mat-cell *matCellDef="let message">
+          {{ formatMessage(message.message) }}
+        </td>
+      </ng-container>
+
+      <!-- Date Column -->
+      <ng-container matColumnDef="createdAt">
+        <th mat-header-cell *matHeaderCellDef>Date</th>
+        <td mat-cell *matCellDef="let message">
+          {{ message.createdAt | date : "medium" }}
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <div *ngIf="(messages$ | async)?.length === 0" class="no-messages">
+      No messages found. Add your first message!
+    </div>
+  </div>
+
+  <div class="overlay" *ngIf="submitting$ | async">
+    <mat-spinner diameter="40"></mat-spinner>
+    <p>Submitting message...</p>
+  </div>
+</div>
